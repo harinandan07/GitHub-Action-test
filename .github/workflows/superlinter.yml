@@ -1,8 +1,10 @@
 name: Super-Linter
 
-# Controls when the action will run. In this case, it runs on pushes and pull requests.
-on:push:
-
+# Controls when the action will run. In this case, it runs only on pushes to the main branch.
+on:
+  push:
+    branches:
+      - main
 
 jobs:
   super-lint:
