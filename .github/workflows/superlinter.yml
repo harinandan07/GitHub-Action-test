@@ -21,4 +21,4 @@ jobs:
         uses: github/super-linter@v5
         env:
           DEFAULT_BRANCH: main # Set the default branch
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }} # GitHub token to allow Super-Linter to post results
+          GITHUB_TOKEN: ${{ secrets.PAT_TOKEN }} # GitHub token to allow Super-Linter to post results
