@@ -1,1 +1,22 @@
+name: Super-Linter
 
+# Controls when the action will run. In this case, it runs on pushes and pull requests.
+on:push:
+
+
+jobs:
+  super-lint:
+    name: Lint Code Base
+    runs-on: ubuntu-latest
+
+    steps:
+      # Check out the repository code
+      - name: Checkout Code
+        uses: actions/checkout@v3
+
+      # Run Super-Linter
+      - name: Run Super-Linter
+        uses: github/super-linter@v5
+        env:
+          DEFAULT_BRANCH: main # Set the default branch
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }} # GitHub token to allow Super-Linter to post results
